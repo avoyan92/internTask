@@ -1,0 +1,17 @@
+.logout{
+      width: 70%;
+      margin: auto;
+      
+}
+
+.out{
+      margin-bottom: 30px;
+      margin-top: 10px;
+
+}
+
+.end{
+      width: 100%;
+     display: flex;
+     justify-content: end;
+}

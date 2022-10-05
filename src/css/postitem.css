@@ -1,0 +1,32 @@
+.postitem{
+      width: 100%;
+      margin-bottom: 10px;
+      border-bottom: 2px solid rgb(107, 102, 102);
+      padding: 7px;
+}
+
+.title {
+      display: flex;
+}
+
+.title > h3 {
+      color: rgb(107, 102, 102);
+}
+
+.color {
+      color: rgb(107, 102, 102);
+      margin-left: 3px;
+}
+
+.btn{
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      border: none;
+      border: 1px solid  rgb(123, 116, 116);
+}
+
+.btn:hover{
+      background: rgb(123, 116, 116);
+}
