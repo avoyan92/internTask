@@ -5,7 +5,8 @@ export const LogIn = ({setProfile}) => {
       const clientId = '1059879948833-fn0oq9ei2l2ror0c9rm1d2b43tgg0eh8.apps.googleusercontent.com'
 
       const onSuccess = (res) => {
-            setProfile(res.profileObj);
+            setProfile(res);
+            console.log(res)
         };
         const onFailure = (err) => {
             console.log('failed:', err);
