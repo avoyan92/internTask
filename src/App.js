@@ -7,7 +7,7 @@ import Comment from "./components/CommentPage";
 import '../src/App.css'
 
 function App() {
-  const clientId = "1059879948833-fn0oq9ei2l2ror0c9rm1d2b43tgg0eh8.apps.googleusercontent.com"
+  const clientId = "535181746511-9tshfvqbh5b5pu7ubrblmcl1j7c9uc4u.apps.googleusercontent.com"
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {

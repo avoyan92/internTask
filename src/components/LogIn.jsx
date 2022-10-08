@@ -2,7 +2,7 @@ import React from 'react'
 import GoogleLogin from 'react-google-login';
 import '../css/login.css'
 export const LogIn = ({setProfile}) => {
-      const clientId = "1059879948833-fn0oq9ei2l2ror0c9rm1d2b43tgg0eh8.apps.googleusercontent.com"
+      const clientId = "535181746511-9tshfvqbh5b5pu7ubrblmcl1j7c9uc4u.apps.googleusercontent.com"
 
       const onSuccess = (res) => {
             setProfile(res.profileObj);
