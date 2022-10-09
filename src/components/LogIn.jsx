@@ -1,9 +1,11 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
+import { clientId } from "../App";
 import "../css/login.css";
+
+
 export const LogIn = ({ setProfile }) => {
-  const clientId =
-    "535181746511-9tshfvqbh5b5pu7ubrblmcl1j7c9uc4u.apps.googleusercontent.com";
+
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);
@@ -11,6 +13,8 @@ export const LogIn = ({ setProfile }) => {
   const onFailure = (err) => {
     console.log("failed:", err);
   };
+
+  
   return (
     <div className="login">
       <GoogleLogin

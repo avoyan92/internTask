@@ -1,41 +1,36 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Comment from "./Comment";
 import "../css/comment.css";
 
 const CommentPage = () => {
   const [commentPage, setCommentPage] = useState({});
   const [comment, setComment] = useState({});
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
-     fetch("https://dummyjson.com/posts/" + id)
-        .then((res) => res.json())
-        .then((post) => setCommentPage(post));
     
+    setLoading(true);
 
+    fetch("https://dummyjson.com/posts/" + id)
+      .then((res) => res.json())
+      .then((post) => setCommentPage(post));
 
     fetch("https://dummyjson.com/comments/" + id)
       .then((res) => res.json())
       .then((comment) => setComment(comment));
+    setLoading(false);
   }, []);
-  
+
+
   return (
     <div className="comment">
-      <div className="commentpage">
-        <h4>{commentPage.title}</h4>
-
-        <p>{commentPage.body}</p>
-      </div>
-      <div className="comentdiv">
-        <h4>Coments</h4>
-        <p>{comment.body}</p>
-      </div>
-      <Link className="back" to="/">
-        <span>
-          {" "}
-          <p>Go back</p>
-        </span>
-      </Link>
+      {loading ? (
+        <h1 style={{textAlign: "center"}}>Loading...</h1>
+      ) : (
+        <Comment comment={comment} commentPage={commentPage} />
+      )}
     </div>
   );
 };
